@@ -19,14 +19,14 @@ This repository contains:
 ---
 
 ## Repository Structure
-###
-open-hardware-fsc-standard/
-│
-├── docs/
-│   ├── OHCS_v1.0.pdf
-│   ├── interface_spec.md
-│   ├── timing_spec.md
-│   ├── kpi_thresholds.md
+
+'open-hardware-fsc-standard/
+'│
+'├── docs/
+'│   ├── OHCS_v1.0.pdf
+'│   ├── interface_spec.md
+'│   ├── timing_spec.md
+'│   ├── kpi_thresholds.md
 │   ├── conformance_tests.md
 │   └── vendor_requirements.md
 │
@@ -59,7 +59,7 @@ open-hardware-fsc-standard/
 │
 ├── LICENSE
 └── README.md
-###
+
 ---
 
 ## Conformance Summary
