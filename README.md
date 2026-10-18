@@ -21,44 +21,6 @@ This repository contains:
 ## Repository Structure
 
 open-hardware-fsc-standard/
-│
-├── docs/
-│   ├── OHCS_v1.0.pdf
-│   ├── interface_spec.md
-│   ├── timing_spec.md
-│   ├── kpi_thresholds.md
-│   ├── conformance_tests.md
-│   └── vendor_requirements.md
-│
-├── rtl/
-│   ├── top_level.v
-│   ├── smps_plc_fsm.v
-│   ├── pwm_generator.v
-│   ├── control_law_dsp48.v
-│   └── adc_interface_stub.v
-│
-├── constraints/
-│   └── artix7_constraints.xdc
-│
-├── sim/
-│   ├── tb_top_level.sv
-│   ├── mixed_signal_fsm.slx
-│   └── vivado_cosim_setup.tcl
-│
-├── matlab/
-│   ├── generate_kpi_report.m
-│   ├── kpi_spec.m
-│   └── auto_build_simulink_model.m
-│
-├── vendor/
-│   ├── onboarding_guide.md
-│   ├── submission_template.md
-│   └── example_vendor_report/
-│       ├── logs.mat
-│       └── report.txt
-│
-├── LICENSE
-└── README.md
 
 ---
 
