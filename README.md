@@ -19,7 +19,7 @@ This repository contains:
 ---
 
 ## Repository Structure
-
+###
 open-hardware-fsc-standard/
 │
 ├── docs/
@@ -59,7 +59,7 @@ open-hardware-fsc-standard/
 │
 ├── LICENSE
 └── README.md
-
+###
 ---
 
 ## Conformance Summary
