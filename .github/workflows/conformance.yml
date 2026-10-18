@@ -1,0 +1,30 @@
+name: OHCS Conformance Test
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  conformance:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Install MATLAB
+      uses: matlab-actions/setup-matlab@v1
+
+    - name: Run KPI Report
+      run: |
+        matlab -batch "logs = load('vendor/example_vendor_report/logs.mat'); spec = kpi_spec; report = generate_kpi_report(logs, spec); save('report.mat','report');"
+
+    - name: Evaluate PASS/FAIL
+      run: |
+        python3 .github/workflows/evaluate.py
+
+    - name: Upload Report
+      uses: actions/upload-artifact@v3
+      with:
+        name: conformance-report
+        path: report.mat
