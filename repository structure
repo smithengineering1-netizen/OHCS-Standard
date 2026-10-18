@@ -1,0 +1,16 @@
+mkdir ohcs-standard
+cd ohcs-standard
+git init
+git remote add origin https://github.com/smithengineering1/ohcs-standard.git
+ohcs-standard/
+  docs/
+  rtl/
+  constraints/
+  sim/
+  matlab/
+  vendor/
+  badges/
+  .github/workflows/
+git add .
+git commit -m "Initial OHCS v1.0 publication"
+git push -u origin main
