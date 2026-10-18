@@ -1,0 +1,9 @@
+ohcs-standard/
+  docs/
+  rtl/
+  constraints/
+  sim/
+  matlab/
+  vendor/
+  badges/
+  .github/workflows/
