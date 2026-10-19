@@ -6,7 +6,8 @@ Maintainer: Jimmy Willard Anthony Smith (Clarkson EE ’99)
 ---
 
 ## Overview
-The Open Hardware Conformance Standard (OHCS) defines a vendor‑neutral, mixed‑signal finite state controller (MS‑FSC) architecture for SMPS/PLC applications.  
+The Open Hardware Conformance Standard (OHCS) defines a vendor‑neutral, mixed‑signal finite state controller (MS‑FSC) architecture for SMPS/PLC applications. 
+
 It ensures interoperability across FPGA, ASIC, SPLD, CPLD, GPU‑accelerated, and photonic‑hybrid controllers.
 
 This repository contains:
