@@ -1,7 +1,7 @@
 # Open Hardware Conformance Standard (OHCS)
 ### Mixed‑Signal Finite State Controller (MS‑FSC)
 Version 1.0 — October 2026  
-Maintainer: Jimmy Willard Anthony Smith (Clarkson EE ’99)
+Maintainer: Jimmy Willard Anthony Smith, CEM (Clarkson EE ’99)
 
 ---
 
