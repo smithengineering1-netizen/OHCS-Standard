@@ -20,11 +20,26 @@ jobs:
         matlab -batch "logs = load('vendor/example_vendor_report/logs.mat'); spec = kpi_spec; report = generate_kpi_report(logs, spec); save('report.mat','report');"
 
     - name: Evaluate PASS/FAIL
+      id: evaluate
       run: |
-        python3 .github/workflows/evaluate.py
+        python3 .github/workflows/evaluate.py > result.txt
+        if grep -q "CONFORMANCE: PASS" result.txt; then
+          echo "status=PASS" >> $GITHUB_OUTPUT
+        else
+          echo "status=FAIL" >> $GITHUB_OUTPUT
+        fi
 
-    - name: Upload Report
-      uses: actions/upload-artifact@v3
-      with:
-        name: conformance-report
-        path: report.mat
+    - name: Update badge in README
+      if: github.event_name == 'push'
+      run: |
+        STATUS=${{ steps.evaluate.outputs.status }}
+        if [ "$STATUS" = "PASS" ]; then
+          BADGE="![OHCS](https://img.shields.io/badge/OHCS-PASS-28a745)"
+        else
+          BADGE="![OHCS](https://img.shields.io/badge/OHCS-FAIL-dc3545)"
+        fi
+        sed -i "s|![OHCS].*|$BADGE|" README.md
+        git config user.name "github-actions"
+        git config user.email "actions@github.com"
+        git commit -am "Update OHCS badge to $STATUS" || echo "No changes"
+        git push || echo "No push on PR"
