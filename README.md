@@ -66,3 +66,7 @@ The CI/CD pipeline automatically evaluates conformance.
 ## License
 MIT License — open for commercial and academic use.
 
+![OHCS](https://img.shields.io/badge/OHCS-UNKNOWN-6b7280)
+
+---
+
